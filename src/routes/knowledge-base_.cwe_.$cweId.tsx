@@ -1,7 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router';
 import { KnowledgeBase } from '@/components/cgva/screens';
 import { workspaceQuery, cgvaHead } from '@/lib/cgva/api';
-export const Route = createFileRoute('/knowledge-base/cwe/$cweId')({
+export const Route = createFileRoute('/knowledge-base_/cwe_/$cweId')({
   head: () => cgvaHead('CWE Specification'),
   loader: ({ context }) => context.queryClient.ensureQueryData(workspaceQuery),
   component: Page,

@@ -1,7 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router';
 import { FunctionDetail } from '@/components/cgva/screens';
 import { workspaceQuery, cgvaHead } from '@/lib/cgva/api';
-export const Route = createFileRoute('/functions/$functionId/contract')({
+export const Route = createFileRoute('/functions_/$functionId_/contract')({
   head: () => cgvaHead('Behavioral Contract'),
   loader: ({ context }) => context.queryClient.ensureQueryData(workspaceQuery),
   component: Page,

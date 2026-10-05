@@ -10,33 +10,342 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ArchitectureRouteImport } from './routes/architecture'
+import { Route as DashboardRouteImport } from './routes/dashboard'
+import { Route as DocumentationRouteImport } from './routes/documentation'
+import { Route as KnowledgeBaseRouteImport } from './routes/knowledge-base'
+import { Route as LoginRouteImport } from './routes/login'
+import { Route as ProjectsRouteImport } from './routes/projects'
+import { Route as ReportsRouteImport } from './routes/reports'
+import { Route as ReviewRouteImport } from './routes/review'
+import { Route as SessionsRouteImport } from './routes/sessions'
+import { Route as SettingsRouteImport } from './routes/settings'
+import { Route as AnalysisNewRouteImport } from './routes/analysis_.new'
+import { Route as FunctionsFunctionIdRouteImport } from './routes/functions_.$functionId'
+import { Route as KnowledgeBaseSpecificationsRouteImport } from './routes/knowledge-base_.specifications'
+import { Route as ProjectsProjectIdRouteImport } from './routes/projects_.$projectId'
+import { Route as ReportsReportIdRouteImport } from './routes/reports_.$reportId'
+import { Route as ReviewReviewIdRouteImport } from './routes/review_.$reviewId'
+import { Route as SessionsSessionIdRouteImport } from './routes/sessions_.$sessionId'
+import { Route as FunctionsFunctionIdAuditRouteImport } from './routes/functions_.$functionId_.audit'
+import { Route as FunctionsFunctionIdContractRouteImport } from './routes/functions_.$functionId_.contract'
+import { Route as FunctionsFunctionIdVerificationRouteImport } from './routes/functions_.$functionId_.verification'
+import { Route as KnowledgeBaseCweCweIdRouteImport } from './routes/knowledge-base_.cwe_.$cweId'
+import { Route as SessionsSessionIdFunctionsRouteImport } from './routes/sessions_.$sessionId_.functions'
+import { Route as SessionsSessionIdPipelineRouteImport } from './routes/sessions_.$sessionId_.pipeline'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ArchitectureRoute = ArchitectureRouteImport.update({
+  id: '/architecture',
+  path: '/architecture',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DashboardRoute = DashboardRouteImport.update({
+  id: '/dashboard',
+  path: '/dashboard',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DocumentationRoute = DocumentationRouteImport.update({
+  id: '/documentation',
+  path: '/documentation',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KnowledgeBaseRoute = KnowledgeBaseRouteImport.update({
+  id: '/knowledge-base',
+  path: '/knowledge-base',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LoginRoute = LoginRouteImport.update({
+  id: '/login',
+  path: '/login',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProjectsRoute = ProjectsRouteImport.update({
+  id: '/projects',
+  path: '/projects',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReportsRoute = ReportsRouteImport.update({
+  id: '/reports',
+  path: '/reports',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReviewRoute = ReviewRouteImport.update({
+  id: '/review',
+  path: '/review',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SessionsRoute = SessionsRouteImport.update({
+  id: '/sessions',
+  path: '/sessions',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SettingsRoute = SettingsRouteImport.update({
+  id: '/settings',
+  path: '/settings',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AnalysisNewRoute = AnalysisNewRouteImport.update({
+  id: '/analysis_/new',
+  path: '/analysis/new',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FunctionsFunctionIdRoute = FunctionsFunctionIdRouteImport.update({
+  id: '/functions_/$functionId',
+  path: '/functions/$functionId',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KnowledgeBaseSpecificationsRoute =
+  KnowledgeBaseSpecificationsRouteImport.update({
+    id: '/knowledge-base_/specifications',
+    path: '/knowledge-base/specifications',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ProjectsProjectIdRoute = ProjectsProjectIdRouteImport.update({
+  id: '/projects_/$projectId',
+  path: '/projects/$projectId',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReportsReportIdRoute = ReportsReportIdRouteImport.update({
+  id: '/reports_/$reportId',
+  path: '/reports/$reportId',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReviewReviewIdRoute = ReviewReviewIdRouteImport.update({
+  id: '/review_/$reviewId',
+  path: '/review/$reviewId',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SessionsSessionIdRoute = SessionsSessionIdRouteImport.update({
+  id: '/sessions_/$sessionId',
+  path: '/sessions/$sessionId',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FunctionsFunctionIdAuditRoute =
+  FunctionsFunctionIdAuditRouteImport.update({
+    id: '/functions_/$functionId_/audit',
+    path: '/functions/$functionId/audit',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const FunctionsFunctionIdContractRoute =
+  FunctionsFunctionIdContractRouteImport.update({
+    id: '/functions_/$functionId_/contract',
+    path: '/functions/$functionId/contract',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const FunctionsFunctionIdVerificationRoute =
+  FunctionsFunctionIdVerificationRouteImport.update({
+    id: '/functions_/$functionId_/verification',
+    path: '/functions/$functionId/verification',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const KnowledgeBaseCweCweIdRoute = KnowledgeBaseCweCweIdRouteImport.update({
+  id: '/knowledge-base_/cwe_/$cweId',
+  path: '/knowledge-base/cwe/$cweId',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SessionsSessionIdFunctionsRoute =
+  SessionsSessionIdFunctionsRouteImport.update({
+    id: '/sessions_/$sessionId_/functions',
+    path: '/sessions/$sessionId/functions',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const SessionsSessionIdPipelineRoute =
+  SessionsSessionIdPipelineRouteImport.update({
+    id: '/sessions_/$sessionId_/pipeline',
+    path: '/sessions/$sessionId/pipeline',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/architecture': typeof ArchitectureRoute
+  '/dashboard': typeof DashboardRoute
+  '/documentation': typeof DocumentationRoute
+  '/knowledge-base': typeof KnowledgeBaseRoute
+  '/login': typeof LoginRoute
+  '/projects': typeof ProjectsRoute
+  '/reports': typeof ReportsRoute
+  '/review': typeof ReviewRoute
+  '/sessions': typeof SessionsRoute
+  '/settings': typeof SettingsRoute
+  '/analysis/new': typeof AnalysisNewRoute
+  '/functions/$functionId': typeof FunctionsFunctionIdRoute
+  '/knowledge-base/specifications': typeof KnowledgeBaseSpecificationsRoute
+  '/projects/$projectId': typeof ProjectsProjectIdRoute
+  '/reports/$reportId': typeof ReportsReportIdRoute
+  '/review/$reviewId': typeof ReviewReviewIdRoute
+  '/sessions/$sessionId': typeof SessionsSessionIdRoute
+  '/functions/$functionId/audit': typeof FunctionsFunctionIdAuditRoute
+  '/functions/$functionId/contract': typeof FunctionsFunctionIdContractRoute
+  '/functions/$functionId/verification': typeof FunctionsFunctionIdVerificationRoute
+  '/knowledge-base/cwe/$cweId': typeof KnowledgeBaseCweCweIdRoute
+  '/sessions/$sessionId/functions': typeof SessionsSessionIdFunctionsRoute
+  '/sessions/$sessionId/pipeline': typeof SessionsSessionIdPipelineRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/architecture': typeof ArchitectureRoute
+  '/dashboard': typeof DashboardRoute
+  '/documentation': typeof DocumentationRoute
+  '/knowledge-base': typeof KnowledgeBaseRoute
+  '/login': typeof LoginRoute
+  '/projects': typeof ProjectsRoute
+  '/reports': typeof ReportsRoute
+  '/review': typeof ReviewRoute
+  '/sessions': typeof SessionsRoute
+  '/settings': typeof SettingsRoute
+  '/analysis/new': typeof AnalysisNewRoute
+  '/functions/$functionId': typeof FunctionsFunctionIdRoute
+  '/knowledge-base/specifications': typeof KnowledgeBaseSpecificationsRoute
+  '/projects/$projectId': typeof ProjectsProjectIdRoute
+  '/reports/$reportId': typeof ReportsReportIdRoute
+  '/review/$reviewId': typeof ReviewReviewIdRoute
+  '/sessions/$sessionId': typeof SessionsSessionIdRoute
+  '/functions/$functionId/audit': typeof FunctionsFunctionIdAuditRoute
+  '/functions/$functionId/contract': typeof FunctionsFunctionIdContractRoute
+  '/functions/$functionId/verification': typeof FunctionsFunctionIdVerificationRoute
+  '/knowledge-base/cwe/$cweId': typeof KnowledgeBaseCweCweIdRoute
+  '/sessions/$sessionId/functions': typeof SessionsSessionIdFunctionsRoute
+  '/sessions/$sessionId/pipeline': typeof SessionsSessionIdPipelineRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/architecture': typeof ArchitectureRoute
+  '/dashboard': typeof DashboardRoute
+  '/documentation': typeof DocumentationRoute
+  '/knowledge-base': typeof KnowledgeBaseRoute
+  '/login': typeof LoginRoute
+  '/projects': typeof ProjectsRoute
+  '/reports': typeof ReportsRoute
+  '/review': typeof ReviewRoute
+  '/sessions': typeof SessionsRoute
+  '/settings': typeof SettingsRoute
+  '/analysis_/new': typeof AnalysisNewRoute
+  '/functions_/$functionId': typeof FunctionsFunctionIdRoute
+  '/knowledge-base_/specifications': typeof KnowledgeBaseSpecificationsRoute
+  '/projects_/$projectId': typeof ProjectsProjectIdRoute
+  '/reports_/$reportId': typeof ReportsReportIdRoute
+  '/review_/$reviewId': typeof ReviewReviewIdRoute
+  '/sessions_/$sessionId': typeof SessionsSessionIdRoute
+  '/functions_/$functionId_/audit': typeof FunctionsFunctionIdAuditRoute
+  '/functions_/$functionId_/contract': typeof FunctionsFunctionIdContractRoute
+  '/functions_/$functionId_/verification': typeof FunctionsFunctionIdVerificationRoute
+  '/knowledge-base_/cwe_/$cweId': typeof KnowledgeBaseCweCweIdRoute
+  '/sessions_/$sessionId_/functions': typeof SessionsSessionIdFunctionsRoute
+  '/sessions_/$sessionId_/pipeline': typeof SessionsSessionIdPipelineRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/architecture'
+    | '/dashboard'
+    | '/documentation'
+    | '/knowledge-base'
+    | '/login'
+    | '/projects'
+    | '/reports'
+    | '/review'
+    | '/sessions'
+    | '/settings'
+    | '/analysis/new'
+    | '/functions/$functionId'
+    | '/knowledge-base/specifications'
+    | '/projects/$projectId'
+    | '/reports/$reportId'
+    | '/review/$reviewId'
+    | '/sessions/$sessionId'
+    | '/functions/$functionId/audit'
+    | '/functions/$functionId/contract'
+    | '/functions/$functionId/verification'
+    | '/knowledge-base/cwe/$cweId'
+    | '/sessions/$sessionId/functions'
+    | '/sessions/$sessionId/pipeline'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/architecture'
+    | '/dashboard'
+    | '/documentation'
+    | '/knowledge-base'
+    | '/login'
+    | '/projects'
+    | '/reports'
+    | '/review'
+    | '/sessions'
+    | '/settings'
+    | '/analysis/new'
+    | '/functions/$functionId'
+    | '/knowledge-base/specifications'
+    | '/projects/$projectId'
+    | '/reports/$reportId'
+    | '/review/$reviewId'
+    | '/sessions/$sessionId'
+    | '/functions/$functionId/audit'
+    | '/functions/$functionId/contract'
+    | '/functions/$functionId/verification'
+    | '/knowledge-base/cwe/$cweId'
+    | '/sessions/$sessionId/functions'
+    | '/sessions/$sessionId/pipeline'
+  id:
+    | '__root__'
+    | '/'
+    | '/architecture'
+    | '/dashboard'
+    | '/documentation'
+    | '/knowledge-base'
+    | '/login'
+    | '/projects'
+    | '/reports'
+    | '/review'
+    | '/sessions'
+    | '/settings'
+    | '/analysis_/new'
+    | '/functions_/$functionId'
+    | '/knowledge-base_/specifications'
+    | '/projects_/$projectId'
+    | '/reports_/$reportId'
+    | '/review_/$reviewId'
+    | '/sessions_/$sessionId'
+    | '/functions_/$functionId_/audit'
+    | '/functions_/$functionId_/contract'
+    | '/functions_/$functionId_/verification'
+    | '/knowledge-base_/cwe_/$cweId'
+    | '/sessions_/$sessionId_/functions'
+    | '/sessions_/$sessionId_/pipeline'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ArchitectureRoute: typeof ArchitectureRoute
+  DashboardRoute: typeof DashboardRoute
+  DocumentationRoute: typeof DocumentationRoute
+  KnowledgeBaseRoute: typeof KnowledgeBaseRoute
+  LoginRoute: typeof LoginRoute
+  ProjectsRoute: typeof ProjectsRoute
+  ReportsRoute: typeof ReportsRoute
+  ReviewRoute: typeof ReviewRoute
+  SessionsRoute: typeof SessionsRoute
+  SettingsRoute: typeof SettingsRoute
+  AnalysisNewRoute: typeof AnalysisNewRoute
+  FunctionsFunctionIdRoute: typeof FunctionsFunctionIdRoute
+  KnowledgeBaseSpecificationsRoute: typeof KnowledgeBaseSpecificationsRoute
+  ProjectsProjectIdRoute: typeof ProjectsProjectIdRoute
+  ReportsReportIdRoute: typeof ReportsReportIdRoute
+  ReviewReviewIdRoute: typeof ReviewReviewIdRoute
+  SessionsSessionIdRoute: typeof SessionsSessionIdRoute
+  FunctionsFunctionIdAuditRoute: typeof FunctionsFunctionIdAuditRoute
+  FunctionsFunctionIdContractRoute: typeof FunctionsFunctionIdContractRoute
+  FunctionsFunctionIdVerificationRoute: typeof FunctionsFunctionIdVerificationRoute
+  KnowledgeBaseCweCweIdRoute: typeof KnowledgeBaseCweCweIdRoute
+  SessionsSessionIdFunctionsRoute: typeof SessionsSessionIdFunctionsRoute
+  SessionsSessionIdPipelineRoute: typeof SessionsSessionIdPipelineRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +357,195 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/architecture': {
+      id: '/architecture'
+      path: '/architecture'
+      fullPath: '/architecture'
+      preLoaderRoute: typeof ArchitectureRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dashboard': {
+      id: '/dashboard'
+      path: '/dashboard'
+      fullPath: '/dashboard'
+      preLoaderRoute: typeof DashboardRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/documentation': {
+      id: '/documentation'
+      path: '/documentation'
+      fullPath: '/documentation'
+      preLoaderRoute: typeof DocumentationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/knowledge-base': {
+      id: '/knowledge-base'
+      path: '/knowledge-base'
+      fullPath: '/knowledge-base'
+      preLoaderRoute: typeof KnowledgeBaseRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/login': {
+      id: '/login'
+      path: '/login'
+      fullPath: '/login'
+      preLoaderRoute: typeof LoginRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projects': {
+      id: '/projects'
+      path: '/projects'
+      fullPath: '/projects'
+      preLoaderRoute: typeof ProjectsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/reports': {
+      id: '/reports'
+      path: '/reports'
+      fullPath: '/reports'
+      preLoaderRoute: typeof ReportsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/review': {
+      id: '/review'
+      path: '/review'
+      fullPath: '/review'
+      preLoaderRoute: typeof ReviewRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sessions': {
+      id: '/sessions'
+      path: '/sessions'
+      fullPath: '/sessions'
+      preLoaderRoute: typeof SessionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/settings': {
+      id: '/settings'
+      path: '/settings'
+      fullPath: '/settings'
+      preLoaderRoute: typeof SettingsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/analysis_/new': {
+      id: '/analysis_/new'
+      path: '/analysis/new'
+      fullPath: '/analysis/new'
+      preLoaderRoute: typeof AnalysisNewRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/functions_/$functionId': {
+      id: '/functions_/$functionId'
+      path: '/functions/$functionId'
+      fullPath: '/functions/$functionId'
+      preLoaderRoute: typeof FunctionsFunctionIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/knowledge-base_/specifications': {
+      id: '/knowledge-base_/specifications'
+      path: '/knowledge-base/specifications'
+      fullPath: '/knowledge-base/specifications'
+      preLoaderRoute: typeof KnowledgeBaseSpecificationsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projects_/$projectId': {
+      id: '/projects_/$projectId'
+      path: '/projects/$projectId'
+      fullPath: '/projects/$projectId'
+      preLoaderRoute: typeof ProjectsProjectIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/reports_/$reportId': {
+      id: '/reports_/$reportId'
+      path: '/reports/$reportId'
+      fullPath: '/reports/$reportId'
+      preLoaderRoute: typeof ReportsReportIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/review_/$reviewId': {
+      id: '/review_/$reviewId'
+      path: '/review/$reviewId'
+      fullPath: '/review/$reviewId'
+      preLoaderRoute: typeof ReviewReviewIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sessions_/$sessionId': {
+      id: '/sessions_/$sessionId'
+      path: '/sessions/$sessionId'
+      fullPath: '/sessions/$sessionId'
+      preLoaderRoute: typeof SessionsSessionIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/functions_/$functionId_/audit': {
+      id: '/functions_/$functionId_/audit'
+      path: '/functions/$functionId/audit'
+      fullPath: '/functions/$functionId/audit'
+      preLoaderRoute: typeof FunctionsFunctionIdAuditRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/functions_/$functionId_/contract': {
+      id: '/functions_/$functionId_/contract'
+      path: '/functions/$functionId/contract'
+      fullPath: '/functions/$functionId/contract'
+      preLoaderRoute: typeof FunctionsFunctionIdContractRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/functions_/$functionId_/verification': {
+      id: '/functions_/$functionId_/verification'
+      path: '/functions/$functionId/verification'
+      fullPath: '/functions/$functionId/verification'
+      preLoaderRoute: typeof FunctionsFunctionIdVerificationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/knowledge-base_/cwe_/$cweId': {
+      id: '/knowledge-base_/cwe_/$cweId'
+      path: '/knowledge-base/cwe/$cweId'
+      fullPath: '/knowledge-base/cwe/$cweId'
+      preLoaderRoute: typeof KnowledgeBaseCweCweIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sessions_/$sessionId_/functions': {
+      id: '/sessions_/$sessionId_/functions'
+      path: '/sessions/$sessionId/functions'
+      fullPath: '/sessions/$sessionId/functions'
+      preLoaderRoute: typeof SessionsSessionIdFunctionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sessions_/$sessionId_/pipeline': {
+      id: '/sessions_/$sessionId_/pipeline'
+      path: '/sessions/$sessionId/pipeline'
+      fullPath: '/sessions/$sessionId/pipeline'
+      preLoaderRoute: typeof SessionsSessionIdPipelineRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ArchitectureRoute: ArchitectureRoute,
+  DashboardRoute: DashboardRoute,
+  DocumentationRoute: DocumentationRoute,
+  KnowledgeBaseRoute: KnowledgeBaseRoute,
+  LoginRoute: LoginRoute,
+  ProjectsRoute: ProjectsRoute,
+  ReportsRoute: ReportsRoute,
+  ReviewRoute: ReviewRoute,
+  SessionsRoute: SessionsRoute,
+  SettingsRoute: SettingsRoute,
+  AnalysisNewRoute: AnalysisNewRoute,
+  FunctionsFunctionIdRoute: FunctionsFunctionIdRoute,
+  KnowledgeBaseSpecificationsRoute: KnowledgeBaseSpecificationsRoute,
+  ProjectsProjectIdRoute: ProjectsProjectIdRoute,
+  ReportsReportIdRoute: ReportsReportIdRoute,
+  ReviewReviewIdRoute: ReviewReviewIdRoute,
+  SessionsSessionIdRoute: SessionsSessionIdRoute,
+  FunctionsFunctionIdAuditRoute: FunctionsFunctionIdAuditRoute,
+  FunctionsFunctionIdContractRoute: FunctionsFunctionIdContractRoute,
+  FunctionsFunctionIdVerificationRoute: FunctionsFunctionIdVerificationRoute,
+  KnowledgeBaseCweCweIdRoute: KnowledgeBaseCweCweIdRoute,
+  SessionsSessionIdFunctionsRoute: SessionsSessionIdFunctionsRoute,
+  SessionsSessionIdPipelineRoute: SessionsSessionIdPipelineRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

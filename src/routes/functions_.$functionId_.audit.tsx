@@ -1,7 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router';
 import { FunctionDetail } from '@/components/cgva/screens';
 import { workspaceQuery, cgvaHead } from '@/lib/cgva/api';
-export const Route = createFileRoute('/functions/$functionId/audit')({
+export const Route = createFileRoute('/functions_/$functionId_/audit')({
   head: () => cgvaHead('Function Audit Trail'),
   loader: ({ context }) => context.queryClient.ensureQueryData(workspaceQuery),
   component: Page,
