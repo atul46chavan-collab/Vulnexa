@@ -1,9 +1,9 @@
 import { createFileRoute } from '@tanstack/react-router';
-import { Dashboard } from '@/components/cgva/screens';
+import { Sessions } from '@/components/cgva/screens';
 import { workspaceQuery, cgvaHead } from '@/lib/cgva/api';
-export const Route = createFileRoute('/')({
-  head: () => cgvaHead('Dashboard'),
+export const Route = createFileRoute('/sessions')({
+  head: () => cgvaHead('Analysis Sessions'),
   loader: ({ context }) => context.queryClient.ensureQueryData(workspaceQuery),
   component: Page,
 });
-function Page() {  return <Dashboard/>; }
+function Page() {  return <Sessions/>; }
