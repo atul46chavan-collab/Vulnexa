@@ -14,7 +14,7 @@ export function Badge({ children, tone }: { children: ReactNode; tone?: string }
 export function PageHeader({ title, subtitle, children }: { title: string; subtitle?: string; children?: ReactNode }) {
  return <div className="page-header"><div><h1 className="page-title">{title}</h1>{subtitle && <p className="page-subtitle">{subtitle}</p>}</div><div className="header-actions">{children}</div></div>;
 }
-export function Panel({ title, subtitle, action, children, className = '', body = false }: { title?: string; subtitle?: string; action?: ReactNode; children: ReactNode; className?: string; body?: boolean }) {
+export function Panel({ title, subtitle, action, children, className = '', body = false }: { title?: string; subtitle?: string | undefined; action?: ReactNode; children: ReactNode; className?: string; body?: boolean }) {
  return <section className={`panel ${className}`}>{title && <div className="panel-heading"><div><h2>{title}</h2>{subtitle && <p>{subtitle}</p>}</div>{action}</div>}<div className={body ? 'panel-body' : ''}>{children}</div></section>;
 }
 export function Tabs({ items, value, onChange }: { items: string[]; value: string; onChange: (s: string) => void }) {
