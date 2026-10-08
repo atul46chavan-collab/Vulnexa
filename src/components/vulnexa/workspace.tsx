@@ -5,6 +5,7 @@ import { Shield, LayoutDashboard, Plus, FolderKanban, Files, ClipboardCheck, Boo
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
 import { workspaceQuery } from '@/lib/vulnexa/api';
+import logoIcon from '@/assets/vulnexa-logo-icon.png';
 
 export function Badge({ children, tone }: { children: ReactNode; tone?: string }) {
  const text = typeof children === 'string' ? children : '';
@@ -29,7 +30,7 @@ export function BackendAction({ label, children, variant = 'default' }: { label:
 const nav = [
  { label: 'Overview', to: '/dashboard', icon: LayoutDashboard }, { label: 'New Analysis', to: '/analysis/new', icon: Plus }, { label: 'Projects', to: '/projects', icon: FolderKanban }, { label: 'Sessions', to: '/sessions', icon: Files }, { label: 'Review Queue', to: '/review', icon: ClipboardCheck }, { label: 'Knowledge Base', to: '/knowledge-base', icon: BookOpen }, { label: 'Reports', to: '/reports', icon: FileBarChart }, { label: 'Settings', to: '/settings', icon: Settings },
 ] as const;
-export function Brand() { return <div className="brand"><Shield size={30} strokeWidth={1.7}/><span className="brand-name">Vulnexa</span><span className="brand-descriptor">Contract-Guided<br/>Vulnerability Auditor</span></div> }
+export function Brand() { return <div className="brand" aria-label="Vulnexa"><img src={logoIcon} alt="Vulnexa shield logo" width={32} height={37} className="brand-logo"/><span className="brand-name">Vulnexa</span><span className="brand-descriptor">Contract-Guided<br/>Vulnerability Auditor</span></div> }
 export function AppShell({ children }: { children: ReactNode }) {
  const { data } = useSuspenseQuery(workspaceQuery);
  const path = useLocation({ select: l => l.pathname });
