@@ -66,5 +66,5 @@ export class RealApiClient implements ApiClient {
 }
 // No undocumented production endpoints are guessed. Replace this adapter after the FastAPI schema is supplied.
 export const apiClient: ApiClient = new MockApiClient();
-export const workspaceQuery = queryOptions({ queryKey: ['cgva-workspace'], queryFn: () => apiClient.getWorkspace(), staleTime: Infinity });
-export const cgvaHead = (title: string, description = 'Contract-guided C/C++ vulnerability analysis with traceable evidence, security contracts, and fix verification.') => ({ meta: [{ title: `${title} | CGVA` }, { name: 'description', content: description }, { property: 'og:title', content: `${title} | CGVA` }, { property: 'og:description', content: description }, { property: 'og:type', content: 'website' }, { name: 'twitter:card', content: 'summary_large_image' }] });
+export const workspaceQuery = queryOptions({ queryKey: ['vulnexa-workspace'], queryFn: () => apiClient.getWorkspace(), staleTime: Infinity });
+export const vulnexaHead = (title: string, description = `Vulnexa ${title.toLowerCase()}: contract-guided C/C++ security auditing with traceable evidence and clearly labeled demonstration data.`) => ({ meta: [{ title: `${title} | Vulnexa` }, { name: 'description', content: description }, { property: 'og:title', content: `${title} | Vulnexa` }, { property: 'og:description', content: description }, { property: 'og:type', content: 'website' }, { name: 'twitter:card', content: 'summary_large_image' }] });

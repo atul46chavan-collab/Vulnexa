@@ -1,5 +1,5 @@
-# Vilnexa frontend
-- [ ] Replace the CGVA name throughout and install a teal Vilnexa logo and matching favicon.
+# Vulnexa frontend
+- [ ] Replace the Vulnexa name throughout and install a teal Vulnexa logo and matching favicon.
 - [ ] Resolve current preview errors and finish missing detail workflows.
 - [ ] Establish exact reference design system and shared shell.
 - [ ] Build overview, analysis, projects, sessions, pipeline, and function evidence views.

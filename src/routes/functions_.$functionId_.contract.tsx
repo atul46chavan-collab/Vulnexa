@@ -1,8 +1,8 @@
 import { createFileRoute } from '@tanstack/react-router';
-import { FunctionDetail } from '@/components/cgva/screens';
-import { workspaceQuery, cgvaHead } from '@/lib/cgva/api';
+import { FunctionDetail } from '@/components/vulnexa/screens';
+import { workspaceQuery, vulnexaHead } from '@/lib/vulnexa/api';
 export const Route = createFileRoute('/functions_/$functionId_/contract')({
-  head: () => cgvaHead('Behavioral Contract'),
+  head: () => vulnexaHead('Behavioral Contract'),
   loader: ({ context }) => context.queryClient.ensureQueryData(workspaceQuery),
   component: Page,
 });

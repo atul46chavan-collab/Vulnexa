@@ -1,8 +1,8 @@
 import { createFileRoute } from '@tanstack/react-router';
-import { Projects } from '@/components/cgva/screens';
-import { workspaceQuery, cgvaHead } from '@/lib/cgva/api';
+import { Projects } from '@/components/vulnexa/screens';
+import { workspaceQuery, vulnexaHead } from '@/lib/vulnexa/api';
 export const Route = createFileRoute('/projects')({
-  head: () => cgvaHead('Projects'),
+  head: () => vulnexaHead('Projects'),
   loader: ({ context }) => context.queryClient.ensureQueryData(workspaceQuery),
   component: Page,
 });
